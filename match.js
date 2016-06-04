@@ -13,3 +13,9 @@ let bar = {
 console.log('foo'.match(bar)); // -> 'This is not bar!'
 console.log('bar'.match(bar)); // -> 'This is bar!'
 console.log('bar'.match(/bar/)); // -> [ 'bar', index: 0, input: 'bar' ]
+
+// Symbol.matchを持ったオブジェクトはRegExpと見なすので、下記はType Errorになる。
+// ※ Node 6.2.1では下記メソッドの実装が仕様通りではないので、エラーにならない。
+console.log('bar'.startsWith(bar));
+console.log('bar'.endsWith(bar));
+console.log('bar'.includes(bar));
