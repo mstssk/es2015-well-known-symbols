@@ -29,6 +29,7 @@ let weekday = new Weekday(date);
 
 console.log(+foo); // -> 100 数値へのキャストはhint=numberの場合の値
 console.log(`${foo}de`); // -> abcde 文字列として扱う場合はhint=stringの場合の値
+console.log({abc:123}[foo]); // -> 123 キーとして扱う場合はhint=string http://www.ecma-international.org/ecma-262/6.0/#sec-topropertykey
 console.log(foo + ''); // -> true +記号による文字列結合ではhint=defaultになる 
 
 console.log(+date); // 日付の数値表現
